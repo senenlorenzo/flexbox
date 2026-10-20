@@ -1,0 +1,89 @@
+:root {
+    --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg");
+    --bg-img-galeria-2: url("https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg");
+    --bg-img-galeria-3: url("https://cdn.pixabay.com/photo/2018/05/09/22/51/blue-sky-3386409_1280.jpg");
+    --bg-img-galeria-4: url("https://cdn.pixabay.com/photo/2020/10/02/21/06/dome-5622133_1280.jpg");
+    --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg");
+    --bg-url-img-portada: url(https://cdn.pixabay.com/photo/2020/02/09/13/08/banner-4833105_960_720.jpg);
+}
+/* header.portada {
+    position: relative;
+    height: 40vh;
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+        background-image: var(--bg-url-img-portada);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+} */
+header.portada {
+    height: 40vh;
+    &::before {
+        background-image: var(--bg-url-img-portada);
+    }
+}
+header.portada {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & h2 {
+        position: relative;
+        width: 100%;
+        padding: 1em;
+        text-align: center;
+        background-color: #00000080;
+        color: white;
+    }
+}
+.img-before {
+    position: relative;
+    height: 15vh;
+    background-color: aqua;
+
+    &::before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+ul.galeria figure.img-before {
+    width: 25%;
+    height: 8rem;
+}
+.diapositiva-1 {
+    &::before {
+        background-image: var(--bg-img-galeria-1);
+    }
+}
+.diapositiva-2 {
+    &::before {
+        background-image: var(--bg-img-galeria-2);
+    }
+}
+.diapositiva-3 {
+    &::before {
+        background-image: var(--bg-img-galeria-3);
+    }
+}
+.diapositiva-4 {
+    &::before {
+        background-image: var(--bg-img-galeria-4);
+    }
+}
+.diapositiva-5 {
+    &::before {
+        background-image: var(--bg-img-galeria-5);
+    }
+}
