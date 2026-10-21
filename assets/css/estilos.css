@@ -9,6 +9,9 @@
     --bg-img-galeria-4: url("https://cdn.pixabay.com/photo/2020/10/02/21/06/dome-5622133_1280.jpg");
     --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg");
     --bg-url-img-portada: url(https://cdn.pixabay.com/photo/2020/02/09/13/08/banner-4833105_960_720.jpg);
+    --url--logo: url(../svg/sn.svg);
+    --logo-ratio: 73/43;
+    --marca-agua-h: 5rem;
 }
 
 main {
@@ -119,5 +122,21 @@ ul.galeria {
 .diapositiva-5 {
     &::before {
         background-image: var(--bg-img-galeria-5);
+    }
+}
+.agua {
+    &::after {
+        position: fixed;
+        content: "";
+        width: calc(var(--marca-agua-h) * var(--logo-ratio));
+        height: var(--marca-agua-h);
+        bottom: 1rem;
+        right: 1rem;
+
+        background-image: var(--url--logo);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: 0.5;
     }
 }
