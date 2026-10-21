@@ -1,4 +1,8 @@
 :root {
+    /* colores del sitio */
+    --color-a: steelblue;
+    --color-a--hover: tomato;
+    /* Imagenees del sitio */
     --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg");
     --bg-img-galeria-2: url("https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg");
     --bg-img-galeria-3: url("https://cdn.pixabay.com/photo/2018/05/09/22/51/blue-sky-3386409_1280.jpg");
@@ -14,10 +18,27 @@ main {
 main > section > article {
     padding: 7.5vw;
 }
-ul {
+a {
+    text-decoration: none;
+}
+/* ejemplo de la pseudoclase not */
+ul:not(.enlaces-pdf) {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+ul.enlaces-pdf {
+    & li {
+        /* margin: 0.5em 0; */
+        line-height: 2;
+        & a {
+            color: var(--color-a);
+
+            &:hover {
+                color: var(--color-a--hover);
+            }
+        }
+    }
 }
 figure {
     margin: 0;
