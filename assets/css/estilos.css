@@ -1,7 +1,13 @@
 :root {
     /* colores del sitio */
-    --color-a: steelblue;
-    --color-a--hover: tomato;
+    --color-1: #530502;
+    --color-2: #270a1e;
+    --color-3: #1542a1a2;
+
+    --color-texto: #666;
+    --bg-body: #fefefe;
+    --color-a: #530502;
+    --color-a--hover: #270a1e;
     /* Imagenees del sitio */
     --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg");
     --bg-img-galeria-2: url("https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg");
@@ -13,6 +19,40 @@
     --logo-ratio: 73/43;
     --marca-agua-h: 5rem;
 }
+/* Underline from center */
+.sn-underline,
+a {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 51%;
+        right: 51%;
+        bottom: 0;
+        background: var(--color-a--hover);
+        height: 4px;
+        -webkit-transition-property: left, right;
+        transition-property: left, right;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+    &:hover::before,
+    &:focus::before,
+    &:active::before {
+        left: 0;
+        right: 0;
+    }
+}
 
 main {
     min-height: 100vh;
@@ -21,8 +61,23 @@ main {
 main > section > article {
     padding: 7.5vw;
 }
+/* Colores delos textos */
+
+body,
+p,
+li,
+span {
+    color: var(--color-texto);
+}
+h3 {
+    color: var(--color-1);
+}
 a {
     text-decoration: none;
+    color: var(--color-1);
+    &:hover {
+        color: var(--color-2);
+    }
 }
 /* ejemplo de la pseudoclase not */
 ul:not(.enlaces-pdf) {
@@ -34,13 +89,6 @@ ul.enlaces-pdf {
     & li {
         /* margin: 0.5em 0; */
         line-height: 2;
-        & a {
-            color: var(--color-a);
-
-            &:hover {
-                color: var(--color-a--hover);
-            }
-        }
     }
 }
 figure {
