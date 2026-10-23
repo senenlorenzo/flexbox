@@ -227,6 +227,7 @@ ul.galeria {
         }
     }
 }
+
 /* Smooth color + shadow on hover */
 .sn-transicion-color {
     width: 25vw;
@@ -285,9 +286,6 @@ ul.galeria {
         &::before {
             content: "Tableta: @media (max-width: 900px)";
         }
-    }
-
-    .boton::before {
     }
 }
 /* MÓVIL: hasta 600 px */
