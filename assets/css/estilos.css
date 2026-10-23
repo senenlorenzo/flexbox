@@ -9,13 +9,40 @@
     --color-a: #530502;
     --color-a--hover: #270a1e;
     /* Imagenees del sitio */
-    --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg");
+    /* --bg-img-galeria-1: url("https://cdn.pixabay.com/photo/2017/11/11/21/55/freedom-2940655_1280.jpg");
     --bg-img-galeria-2: url("https://cdn.pixabay.com/photo/2016/11/13/12/52/kuala-lumpur-1820944_1280.jpg");
     --bg-img-galeria-3: url("https://cdn.pixabay.com/photo/2018/05/09/22/51/blue-sky-3386409_1280.jpg");
     --bg-img-galeria-4: url("https://cdn.pixabay.com/photo/2020/10/02/21/06/dome-5622133_1280.jpg");
     --bg-img-galeria-5: url("https://cdn.pixabay.com/photo/2020/06/28/00/04/chicago-5347435_1280.jpg");
-    --bg-url-img-portada: url(https://cdn.pixabay.com/photo/2020/02/09/13/08/banner-4833105_960_720.jpg);
+    --bg-url-img-portada: url(https://cdn.pixabay.com/photo/2020/02/09/13/08/banner-4833105_960_720.jpg); */
+
+    --portada--origin: url(../img/banner-origin.webp);
+    --portada--large: url("../img/banner-larger.webp");
+    --portada--medium: url("../img/banner-medium.webp");
+    --portada--thumb: url("../img/banner-thumb.webp");
+
+    --galeria-1--large: url("../img/freedom-900px.webp");
+    --galeria-1--medium: url("../img/freedom-600px.webp");
+    --galeria-1--thumb: url("../img/freedom-300px.webp");
+
+    --galeria-2--large: url("../img/blue-sky-900px.webp");
+    --galeria-2--medium: url("../img/blue-sky-600px.webp");
+    --galeria-2--thumb: url("../img/blue-sky-300px.webp");
+
+    --galeria-3--large: url("../img/chicago-900px.webp");
+    --galeria-3--medium: url("../img/chicago-600px.webp");
+    --galeria-3--thumb: url("../img/chicago-300px.webp");
+
+    --galeria-4--large: url("../img/dome-900px.webp");
+    --galeria-4--medium: url("../img/dome-600px.webp");
+    --galeria-4--thumb: url("../img/dome-300px.webp");
+
+    --galeria-5--large: url("../img/kuala-lumpur-900px.webp");
+    --galeria-5--medium: url("../img/kuala-lumpur-600px.webp");
+    --galeria-5--thumb: url("../img/kuala-lumpur-300px.webp");
+
     --url--logo: url(../svg/sn.svg);
+
     --logo-ratio: 73/43;
     --marca-agua-h: 5rem;
 }
@@ -94,14 +121,9 @@ ul.enlaces-pdf {
 figure {
     margin: 0;
 }
-
 header.portada {
     height: 40vh;
-    &::before {
-        background-image: var(--bg-url-img-portada);
-    }
-}
-header.portada {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,6 +136,7 @@ header.portada {
         color: white;
     }
 }
+
 .img-before {
     position: relative;
     background-color: aqua;
@@ -131,6 +154,7 @@ header.portada {
         background-repeat: no-repeat;
     }
 }
+
 ul.galeria {
     display: flex;
     flex-wrap: wrap;
@@ -155,32 +179,6 @@ ul.galeria {
     }
 }
 
-.diapositiva-1 {
-    &::before {
-        background-image: var(--bg-img-galeria-1);
-    }
-}
-.diapositiva-2 {
-    &::before {
-        background-image: var(--bg-img-galeria-2);
-    }
-}
-.diapositiva-3 {
-    &::before {
-        background-image: var(--bg-img-galeria-3);
-    }
-}
-.diapositiva-4 {
-    &::before {
-        background-image: var(--bg-img-galeria-4);
-    }
-}
-
-.diapositiva-5 {
-    &::before {
-        background-image: var(--bg-img-galeria-5);
-    }
-}
 .demo {
     background: #fff;
     border: 1px solid #d9deea;
@@ -200,7 +198,6 @@ ul.galeria {
         background: #eef2ff;
         border-radius: 10px;
         font-size: 0.8rem;
-        color: #55607;
 
         & span {
             width: 5rem;
@@ -295,6 +292,131 @@ ul.galeria {
         color: white;
         &::before {
             content: "Móvil: @media (max-width: 600px)";
+        }
+    }
+}
+/* Imagen de portada */
+header.portada {
+    &::before {
+        background-image: var(--portada--thumb);
+    }
+}
+
+/* galeria-flexbox */
+article.galeria-flex {
+    background-color: lime;
+}
+ul.galeria {
+    & .diapositiva-1 {
+        &::before {
+            background-image: var(--galeria-1--thumb);
+        }
+    }
+    & .diapositiva-2 {
+        &::before {
+            background-image: var(--galeria-2--thumb);
+        }
+    }
+    & .diapositiva-3 {
+        &::before {
+            background-image: var(--galeria-3--thumb);
+        }
+    }
+    & .diapositiva-4 {
+        &::before {
+            background-image: var(--galeria-4--thumb);
+        }
+    }
+
+    & .diapositiva-5 {
+        &::before {
+            background-image: var(--galeria-5--thumb);
+        }
+    }
+}
+header.portada {
+    &::before {
+        background-image: var(--portada--medium);
+    }
+}
+
+@media (min-width: 600px) {
+    header.portada {
+        &::before {
+            background-image: var(--portada--large);
+        }
+    }
+}
+@media (min-width: 900px) {
+    header.portada {
+        &::before {
+            background-image: var(--portada--origin);
+        }
+    }
+}
+@media (min-width: 768px) {
+    article.galeria-flex {
+        background-color: tomato;
+    }
+    ul.galeria {
+        & .diapositiva-1 {
+            &::before {
+                background-image: var(--galeria-1--medium);
+            }
+        }
+        & .diapositiva-2 {
+            &::before {
+                background-image: var(--galeria-2--medium);
+            }
+        }
+        & .diapositiva-3 {
+            &::before {
+                background-image: var(--galeria-3--medium);
+            }
+        }
+        & .diapositiva-4 {
+            &::before {
+                background-image: var(--galeria-4--medium);
+            }
+        }
+
+        & .diapositiva-5 {
+            &::before {
+                background-image: var(--galeria-5--medium);
+            }
+        }
+    }
+}
+@media (min-width: 1024px) {
+    article.galeria-flex {
+        background-color: transparent;
+    }
+    ul.galeria {
+        & .diapositiva-1 {
+            &::before {
+                background-image: var(--galeria-1--large);
+            }
+        }
+        & .diapositiva-2 {
+            &::before {
+                background-image: var(--galeria-2--large);
+            }
+        }
+        & .diapositiva-3 {
+            &::before {
+                background-image: var(--galeria-3--large);
+            }
+        }
+        & .diapositiva-4 {
+            &::before {
+                background-image: var(--galeria-4--large);
+            }
+        }
+
+        & .diapositiva-5 {
+            &::before {
+                background-image: var(--galeria-5--large);
+            }
         }
     }
 }
