@@ -295,12 +295,6 @@ ul.galeria {
         }
     }
 }
-/* Imagen de portada */
-header.portada {
-    &::before {
-        background-image: var(--portada--thumb);
-    }
-}
 
 /* galeria-flexbox */
 article.galeria-flex {
@@ -337,6 +331,7 @@ ul.galeria {
 header.portada {
     &::before {
         background-image: var(--portada--medium);
+        filter: hue-rotate(-50deg) saturate(130%) drop-shadow(2px 2px 8px red) drop-shadow(4px 4px 0px blue) drop-shadow(8px 8px 5px black) brightness(1);
     }
 }
 
