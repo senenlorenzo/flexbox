@@ -1,4 +1,15 @@
 :root {
+    /* Font size */
+    --font-size-m: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    --font-size-s: clamp(0.875rem, 0.83rem + 0.2vw, 1rem);
+    /* h2 */
+    --font-size-xxxl: clamp(2.25rem, 1.6rem + 3.2vw, 4.5rem);
+    /* h3 */
+    --font-size-xxl: clamp(1.6rem, 1.4rem + 1.5vw, 2.4rem);
+    /* h4  */
+    --font-size-xl: clamp(1.4rem, 1.2rem + 1.5vw, 2.2rem);
+    /* h5  */
+    --font-size-l: clamp(1.2rem, 1rem + 1.5vw, 2rem);
     /* colores del sitio */
     --color-1: #530502;
     --color-2: #270a1e;

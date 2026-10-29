@@ -56,7 +56,7 @@ main {
 main > section > article {
     padding: 7.5vw;
 }
-/* Colores delos textos */
+/* Colores de los textos */
 
 body,
 p,
@@ -64,10 +64,42 @@ li,
 span {
     color: var(--color-texto);
 }
+
+/* ----------textos------- */
+
+html {
+    font-size: 16px;
+    & body {
+        line-height: 1.6;
+    }
+}
+h2 {
+    font-size: var(--font-size-xxxl);
+}
 h3 {
-    font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+    font-size: var(--font-size-xxl);
     color: var(--color-1);
 }
+h4 {
+    font-size: var(--font-size-xl);
+}
+h5 {
+    font-size: var(--font-size-l);
+}
+p,
+ul,
+ol,
+li,
+a {
+    font-size: var(--font-size-m);
+}
+figcaption,
+small,
+footer ul li a {
+    font-size: var(--font-size-s);
+}
+
+/* ------fin de textos----- */
 a {
     text-decoration: none;
     color: var(--color-1);
