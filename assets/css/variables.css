@@ -1,0 +1,40 @@
+:root {
+    /* colores del sitio */
+    --color-1: #530502;
+    --color-2: #270a1e;
+    --color-3: #1542a1a2;
+
+    --color-texto: #666;
+    --bg-body: #fefefe;
+    --color-a: #530502;
+    --color-a--hover: #270a1e;
+
+    --portada--origin: url(../img/banner-origin.webp);
+    --portada--large: url("../img/banner-larger.webp");
+    --portada--medium: url("../img/banner-medium.webp");
+    --portada--thumb: url("../img/banner-thumb.webp");
+
+    --galeria-1--large: url("../img/freedom-900px.webp");
+    --galeria-1--medium: url("../img/freedom-600px.webp");
+    --galeria-1--thumb: url("../img/freedom-300px.webp");
+
+    --galeria-2--large: url("../img/blue-sky-900px.webp");
+    --galeria-2--medium: url("../img/blue-sky-600px.webp");
+    --galeria-2--thumb: url("../img/blue-sky-300px.webp");
+
+    --galeria-3--large: url("../img/chicago-900px.webp");
+    --galeria-3--medium: url("../img/chicago-600px.webp");
+    --galeria-3--thumb: url("../img/chicago-300px.webp");
+
+    --galeria-4--large: url("../img/dome-900px.webp");
+    --galeria-4--medium: url("../img/dome-600px.webp");
+    --galeria-4--thumb: url("../img/dome-300px.webp");
+
+    --galeria-5--large: url("../img/kuala-lumpur-900px.webp");
+    --galeria-5--medium: url("../img/kuala-lumpur-600px.webp");
+    --galeria-5--thumb: url("../img/kuala-lumpur-300px.webp");
+
+    --url--logo: url(../svg/sn.svg);
+    --logo-ratio: 73/43;
+    --marca-agua-h: 5rem;
+}

@@ -1,0 +1,99 @@
+/* Smooth color + shadow on hover */
+.sn-transicion-color {
+    width: 25vw;
+    height: 25vw;
+    background-color: steelblue;
+    box-shadow: none;
+    transition:
+        background-color 2s ease,
+        width 2s ease,
+        box-shadow 2s ease;
+
+    &:hover {
+        width: 100%;
+        background-color: orange;
+        opacity: 1;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        /* box-shadow: rgba(200, 200, 0, 0.5) -5px -5px 20px 0px, rgba(0, 0, 0, 0.5) 0px 13px 20px 0px, rgba(200, 0, 0, 0.5) 8px -8px 10px 0px; */
+    }
+}
+.boton {
+    padding: 2em 3em;
+    border: none;
+    border-radius: 8px;
+    background-color: #198754;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    &::before {
+        content: "Escritorio: sin media query específica";
+    }
+}
+
+/* TABLETA: hasta 900 px */
+@media screen and (max-width: 900px) {
+    .boton {
+        background-color: #ffc107;
+        color: #222;
+
+        &::before {
+            content: "Tableta: @media (max-width: 900px)";
+        }
+    }
+}
+/* MÓVIL: hasta 600 px */
+@media screen and (max-width: 600px) {
+    .boton {
+        background-color: #dc3545;
+        color: white;
+        &::before {
+            content: "Móvil: @media (max-width: 600px)";
+        }
+    }
+}
+
+.demo {
+    background: #fff;
+    border: 1px solid #d9deea;
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    & li {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 2rem;
+        background: #eef2ff;
+        border-radius: 10px;
+        font-size: 0.8rem;
+
+        & span {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 10px;
+            background: #2f5bff;
+            color: #fff;
+            display: grid;
+            place-items: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            transition: transform 0.5s ease;
+        }
+        &:hover span {
+            &.translate {
+                transform: translate(2rem, 2rem);
+            }
+            &.rotate {
+                transform: rotate(45deg);
+            }
+            &.scale {
+                transform: scale(1.5);
+            }
+        }
+    }
+}
