@@ -53,25 +53,6 @@ main {
     min-height: 100vh;
 }
 
-main > section > article {
-    padding: 7.5vw;
-}
-/* Colores de los textos */
-
-body,
-p,
-li,
-span {
-    color: var(--color-texto);
-}
-
-a {
-    text-decoration: none;
-    color: var(--color-1);
-    &:hover {
-        color: var(--color-2);
-    }
-}
 /* ejemplo de la pseudoclase not */
 ul:not(.enlaces-pdf) {
     list-style: none;
@@ -86,6 +67,47 @@ ul.enlaces-pdf {
 }
 figure {
     margin: 0;
+}
+
+body {
+    position: relative;
+    & > header {
+        z-index: 3;
+    }
+    & > nav {
+        z-index: 2;
+    }
+}
+body > header,
+body > nav.principal {
+    position: fixed;
+    top: 0;
+    height: 3.5rem;
+}
+body > header {
+    display: flex;
+    align-items: center;
+
+    & a {
+        & figure.logo {
+            background-image: url(../svg/sn.svg);
+            height: 3rem;
+            width: calc(3rem * var(--logo-ratio));
+            margin: 0;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+            background-attachment: scroll;
+        }
+    }
+}
+body > nav {
+    left: 0;
+    width: 100%;
+}
+body main {
+    margin-top: 3.5rem;
 }
 header.portada {
     height: 40vh;
@@ -120,6 +142,50 @@ header.portada {
     header.portada {
         &::before {
             background-image: var(--portada--origin);
+        }
+    }
+}
+
+/*--------- maquetacion ------*/
+
+body {
+    & > header {
+        padding-left: 4vw;
+    }
+    & nav.principal {
+        padding-right: 4vw;
+    }
+    & main > section > article {
+        padding: 5vh;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+}
+@media (min-width: 700px) {
+    body {
+        & > header {
+            padding-left: 7.5vw;
+        }
+        & nav.principal {
+            padding-right: 7.5vw;
+        }
+        & main > section > article {
+            padding-left: 7.5vw;
+            padding-right: 7.5vw;
+        }
+    }
+}
+@media (min-width: 1024px) {
+    body {
+        & > header {
+            padding-left: 10vw;
+        }
+        & nav.principal {
+            padding-right: 10vw;
+        }
+        & main > section > article {
+            padding-left: 10vw;
+            padding-right: 10vw;
         }
     }
 }

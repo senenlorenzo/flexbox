@@ -26,6 +26,23 @@ h6 {
     text-shadow: 3px 3px 3px #000;
 }
 
+/* Colores de los textos */
+
+body,
+p,
+li,
+span {
+    color: var(--color-texto);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-1);
+    &:hover {
+        color: var(--color-2);
+    }
+}
+
 /* ----------textos------- */
 
 html {

@@ -4,14 +4,14 @@
 
     background-image: url(../img/spritesheet-yoshi.webp);
     animation:
-        walk 1.25s steps(8) infinite,
+        walk 3s steps(8) infinite,
         move 8s linear normal infinite,
         mirror 8s steps(1) normal infinite;
 }
 
 @keyframes walk {
     to {
-        background-position: -650px;
+        background-position: -640px;
     }
 }
 @keyframes move {
