@@ -1,0 +1,63 @@
+/* titulos: */
+/* @import url("../fonts/SuperMario256.ttf"); */
+@font-face {
+    font-family: "Mickey";
+    src: url(../fonts/MickeyMouse_PERSONAL_USE_ONLY.otf);
+}
+@font-face {
+    font-family: "Star";
+    src: url(../fonts/Starjedi.ttf);
+}
+@font-face {
+    font-family: "MarioBros";
+    src: url(../fonts/SuperMario256.ttf);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Star";
+    font-weight: 400;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    text-shadow: 3px 3px 3px #000;
+}
+
+/* ----------textos------- */
+
+html {
+    font-size: 16px;
+    & body {
+        line-height: 1.6;
+    }
+}
+h2 {
+    font-size: var(--font-size-xxxl);
+}
+h3 {
+    font-size: var(--font-size-xxl);
+    color: var(--color-1);
+}
+h4 {
+    font-size: var(--font-size-xl);
+}
+h5 {
+    font-size: var(--font-size-l);
+}
+p,
+ul,
+ol,
+li,
+a {
+    font-size: var(--font-size-m);
+}
+figcaption,
+small,
+footer ul li a {
+    font-size: var(--font-size-s);
+}
+
+/* ------fin de textos----- */
