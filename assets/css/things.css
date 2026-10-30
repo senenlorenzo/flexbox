@@ -1,0 +1,35 @@
+.yoshi {
+    width: 69px;
+    height: 150px;
+
+    background-image: url(../img/spritesheet-yoshi.webp);
+    animation:
+        walk 1.25s steps(8) infinite,
+        move 8s linear normal infinite,
+        mirror 8s steps(1) normal infinite;
+}
+
+@keyframes walk {
+    to {
+        background-position: -650px;
+    }
+}
+@keyframes move {
+    0% {
+        translate: 0;
+    }
+    50% {
+        translate: 250px;
+    }
+    100% {
+        translate: 0;
+    }
+}
+@keyframes mirror {
+    0% {
+        scale: 1 1;
+    }
+    50% {
+        scale: -1 1;
+    }
+}
